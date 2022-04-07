@@ -1,0 +1,72 @@
+.img-wrapper {
+  overflow: hidden;
+}
+
+img.hover-zoom {
+  transition: all 0.3s ease 0s;
+  width: 100%;
+}
+img.hover-zoom:hover {
+  transform: scale(1.25);
+}
+.anime-page {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.anime-container {
+  width: 90%;
+  // border: 1px solid;
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  justify-content: space-around;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+@media only screen and (max-width: 1380px) {
+  .anime-container {
+    grid-template-columns: repeat(3, auto);
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .anime-container {
+    grid-template-columns: repeat(2, auto);
+  }
+}
+@media only screen and (max-width: 680px) {
+  .anime-container {
+    grid-template-columns: auto;
+  }
+}
+
+.anime-div {
+  // width: 1 8rem;
+  // grid-column: span 2;
+  margin: 2rem 1rem 5rem 1rem;
+  // height: 24rem;
+  border-radius: 0.8rem;
+  box-shadow: 0.2rem 0rem 1rem 0.5rem rgb(158, 180, 186);
+  // display: flex;
+  // align-items: flex-end;
+  .anime-img {
+    // width: 17rem;
+    // min-height: 20rem;
+    border-radius: 0.8rem 0.8rem 0rem 0rem;
+  }
+  .anime-detail {
+    text-align: center;
+    border-radius: 0rem 0rem 0.8rem 0.8rem;
+  }
+}
+
+.anime-div:nth-last-child(1):nth-child(odd) {
+  grid-column: 2 / span 2;
+}
+
+// .anime-div:nth-last-child(1):nth-child(even) {
+//   grid-column: span 2;
+// }
